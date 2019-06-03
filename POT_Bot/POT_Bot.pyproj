@@ -42,6 +42,8 @@
     <Content Include="database\maps_db.u.html">
       <Publish>True</Publish>
     </Content>
+    <Content Include="database\maps.temp.l.db" />
+    <Content Include="database\maps.temp.u.db" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="database\" />
