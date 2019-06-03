@@ -23,15 +23,23 @@
   <ItemGroup>
     <Compile Include="maps.py">
       <SubType>Code</SubType>
+      <Publish>True</Publish>
     </Compile>
-    <Compile Include="POT_Bot.py" />
+    <Compile Include="POT_Bot.py">
+      <Publish>True</Publish>
+    </Compile>
     <Compile Include="recommender.py">
       <SubType>Code</SubType>
+      <Publish>True</Publish>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="maps_db.l.html" />
-    <Content Include="maps_db.u.html" />
+    <Content Include="maps_db.l.html">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="maps_db.u.html">
+      <Publish>True</Publish>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
