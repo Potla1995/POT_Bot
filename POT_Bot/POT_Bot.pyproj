@@ -34,12 +34,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="maps_db.l.html">
+    <Content Include="database\maps.l.db" />
+    <Content Include="database\maps.u.db" />
+    <Content Include="database\maps_db.l.html">
       <Publish>True</Publish>
     </Content>
-    <Content Include="maps_db.u.html">
+    <Content Include="database\maps_db.u.html">
       <Publish>True</Publish>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="database\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
