@@ -1,8 +1,8 @@
 import maps
 import random
 def initialmapfile():
-    maps.decryptFromDB('database/maps_db.l.html','database/maps.temp.l.db')
-    maps.decryptFromDB('database/maps_db.u.html','database/maps.temp.u.db')
+    maps.decryptFromDB('database/maps_db.l.db','database/maps.temp.l.db')
+    maps.decryptFromDB('database/maps_db.u.db','database/maps.temp.u.db')
     maps.readIntoList('database/maps.temp.l.db','database/maps.l.db')
     maps.readIntoList('database/maps.temp.u.db','database/maps.u.db')
 

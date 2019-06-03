@@ -36,10 +36,10 @@
   <ItemGroup>
     <Content Include="database\maps.l.db" />
     <Content Include="database\maps.u.db" />
-    <Content Include="database\maps_db.l.html">
+    <Content Include="database\maps_db.l.db">
       <Publish>True</Publish>
     </Content>
-    <Content Include="database\maps_db.u.html">
+    <Content Include="database\maps_db.u.db">
       <Publish>True</Publish>
     </Content>
     <Content Include="database\maps.temp.l.db" />
