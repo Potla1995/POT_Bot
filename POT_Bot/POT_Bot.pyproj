@@ -32,6 +32,9 @@
       <SubType>Code</SubType>
       <Publish>True</Publish>
     </Compile>
+    <Compile Include="sharpness.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="database\maps.l.db" />
@@ -44,9 +47,26 @@
     </Content>
     <Content Include="database\maps.temp.l.db" />
     <Content Include="database\maps.temp.u.db" />
+    <Content Include="test\boogie.osu" />
+    <Content Include="test\chikattochika sotarks.osu" />
+    <Content Include="test\feelin sky 200bpm.osu" />
+    <Content Include="test\gold dust galvenize.osu" />
+    <Content Include="test\guess who is back.osu" />
+    <Content Include="test\himei.osu" />
+    <Content Include="test\impulse.osu" />
+    <Content Include="test\Kimi ni pierrot.osu" />
+    <Content Include="test\kimi no bouken kroytz.osu" />
+    <Content Include="test\kimi no sei sotarks.osu" />
+    <Content Include="test\king of lions regou.osu" />
+    <Content Include="test\kokou no sousei chaos.osu" />
+    <Content Include="test\oriental blossom karen.osu" />
+    <Content Include="test\rainbow gay pony.osu" />
+    <Content Include="test\sotarks monochrome butterfly.osu" />
+    <Content Include="test\technical master.osu" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="database\" />
+    <Folder Include="test\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
