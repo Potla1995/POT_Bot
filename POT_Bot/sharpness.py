@@ -26,7 +26,7 @@ def sharpness(mapID):
         j = L.index('[HitObjects]')
         L = L[j+1:len(L)-1]
 
-        # calculate the values ab * sin(abc/2) for every a,b,c.
+        # calculate the values ab * cos(abc/2) for every a,b,c.
         val = []
         for i in range(len(L)-2):
             Lisplit = L[i].split(',')
@@ -45,7 +45,7 @@ def sharpness(mapID):
                 xi = c.split(':')[0]
                 yi = c.split(':')[1]
 
-            # if second object is a slider, (xip,yip) = 2nd point, and 3rd point = next slider point.
+            # if second object is a slider, (xip,yip) = 2nd point, and 3rd point = next slider anchor.
             if len(Lipsplit)>7:
                 #print(i+j+1)
                 c = Lipsplit[5].split('|')[1]
@@ -65,22 +65,15 @@ def sharpness(mapID):
             tip = float(Lipsplit[2])
             ds = distance(xi,yi,xip,yip)/(tip-ti)
 
-            # now calculate sine of angle (ABC)/2:
+            # now calculate cosine of angle (ABC)/2:
             a = cosangleovertwo(xi,yi,xip,yip,xipp,yipp)
 
-            # if objects are not stacked, add ds * a into the array.
+            # if objects are not stacked, append ds * a to the list.
             if ds != 0:
                 val.append(ds * a)
 
         print(mapID + ': ' + str(mean(val)) + ' inverse: ' + str((mean(val)**-1)))
         
-        '''
-        with open(mapID+'.hist.txt', 'w') as g:
-            i = 0
-            for x in val:
-                g.write(str(i)+' '+str(x)+'\n')
-                i += 1
-        '''
 
 for file in os.listdir('test'):
     if file.endswith(".osu"):
