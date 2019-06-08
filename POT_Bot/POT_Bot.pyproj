@@ -35,6 +35,7 @@
     <Compile Include="sharpness.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SharpnessComponent_Slider.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="database\maps.l.db" />
