@@ -189,6 +189,8 @@ def techiness(mapID):
                 sliderspeed = pixelLength / SliderDuration[j]
                 slidervar.append(sliderspeed)
     print(mapID + ': ' + str(mean(slidervar)) + ', variance: ' + str(var(slidervar)))
+
+    
 techiness('test/technical master.osu')
 
 #print(TimingPoints('test/technical master.osu'))
