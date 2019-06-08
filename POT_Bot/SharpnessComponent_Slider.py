@@ -182,9 +182,10 @@ def SliderFollowDifficulty(mapID):
     for i in range(len(SM)):
         x = (SM[i]*CS*AV[i]/DL[i]);
         SFD.append(x);
-    print("{}:{}".format(mapID,mean(SFD)));
+    #print("{}:{}".format(mapID,mean(SFD)));
+    return mean(SFD)
 
-for file in os.listdir('test'):
-    if file.endswith(".osu"):
-        SliderFollowDifficulty('test/'+file)
+#for file in os.listdir('test'):
+#    if file.endswith(".osu"):
+#        SliderFollowDifficulty('test/'+file)
 

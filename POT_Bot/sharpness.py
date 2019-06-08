@@ -170,31 +170,6 @@ def sharpness(mapID):
         print(mapID + ': ' + str(mean(val))) #+ ' inverse: ' + str((mean(val)**-1)))
         return mean(val)
 
-def techiness(mapID):
-    s = sharpness(mapID)   
-    # Incorporate sliderspeeds into the formula:
-    base_sv = SliderMultiplier(mapID)
-    SliderDurationList = SliderDuration(mapID)
-    slidervar =  []
-    j = 0
-    with open(mapID,'r',encoding='utf-8') as f:
-        f = f.read()
-        L = f.split('\n')
-        j = L.index('[HitObjects]')
-        L = L[j+1:len(L)-1]
-        for i in range(len(L)):
-            Lisplit = L[i].split(',')
-            if len(Lisplit) > 7:
-                pixelLength = float(Lisplit[-1])
-                sliderspeed = pixelLength / SliderDuration[j]
-                slidervar.append(sliderspeed)
-    print(mapID + ': ' + str(mean(slidervar)) + ', variance: ' + str(var(slidervar)))
-
-    
-techiness('test/technical master.osu')
-
-#print(TimingPoints('test/technical master.osu'))
-#print(SliderMultiplier('test/technical master.osu'))
 #for file in os.listdir('test'):
 #    if file.endswith(".osu"):
 #        sharpness('test/'+file)
