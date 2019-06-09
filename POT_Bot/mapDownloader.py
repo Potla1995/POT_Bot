@@ -1,6 +1,6 @@
 import urllib.request
 import sys
-import os;
+import os
 
 #Usual URL https://osu.ppy.sh/beatmapsets/705788#osu/1492654
 beatmapsetID = sys.argv[1::]
