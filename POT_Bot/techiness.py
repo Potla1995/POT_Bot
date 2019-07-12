@@ -10,6 +10,6 @@ def techiness(mapID):
     return s*sfd
 
 
-for file in os.listdir('test'):
-    if file.endswith(".osu"):
-        print(file + ': ' + str(techiness('test/'+file)))
+#for file in os.listdir('test'):
+#    if file.endswith(".osu"):
+#        print(file + ': ' + str(techiness('test/'+file)))
