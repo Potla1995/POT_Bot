@@ -72,6 +72,9 @@ def EvalBursts(StreamList):
     6. Spacing between the bursts.
     7. Direction changes.
     8. Cuts <- Dunno how to handle this one.
+    9. Those streams that are 2notes just stacked on top of each other, eg End of Bluenation. 
+    10. Squiggles.
+        1. Check https://discordapp.com/channels/229987181316407296/229987181316407296/599957227729846272 for this
     """
     return BurstList
 
