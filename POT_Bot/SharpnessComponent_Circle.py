@@ -13,6 +13,7 @@ def BeatInterval(mapID):  # Identifies the BPM of any given map.
     return 60 * 1000 / BPM
 
 
+#Obtains all the streams of the map
 def DectectStream(mapID):
     with open(mapID, "r", encoding="utf-8") as f:
         L = f.read().split("\n")
@@ -52,18 +53,33 @@ def DectectStream(mapID):
                 StreamList.append(CurrentStream)
             i = i + 1
 
+        # Return a list if the list is only above three notes.
         TrueStreamList = list(x for x in StreamList if len(x) > 3)
 
         return TrueStreamList
 
 
-def StreamFollowDifficulty(mapID):
+def EvalBursts(StreamList):
+    # Get bursts -- Shorter than 15 notes.
+    BurstList = list(x for x in StreamList if len(x) < 15)
+    """
+    There are Serveral methods of calculating Difficulty for bursts.
+    1. Angle of approach.
+    2. Spacing Changes.
+    3. Spacing.
+    4. Curvature
+    5. Rythym changes (eg, 1/4th and 1/6th) <- TODO
+    6. Spacing between the bursts.
+    7. Direction changes.
+    8. Cuts <- Dunno how to handle this one.
+    """
+    return BurstList
+
+def FlowDifficulty(mapID):
+    # Get all Bursts and Streams
+    # Get difficulty of Bursts only.
     pass
 
 
-# for x in os.listdir('test/'):
-#   if x.endswith('.osu'):
-#     DectectStream('test/'+x)
-
-DectectStream("test/boogie.osu")
+FlowDifficulty("test/boogie.osu")
 
