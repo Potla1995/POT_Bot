@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="mapDownloader.py" />
     <Compile Include="maps.py">
       <SubType>Code</SubType>
       <Publish>True</Publish>
@@ -36,6 +37,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SharpnessComponent_Slider.py" />
+    <Compile Include="techiness.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="database\maps.l.db" />
